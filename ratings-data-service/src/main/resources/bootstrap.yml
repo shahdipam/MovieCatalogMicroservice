@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ratings-data-service
+
+eureka:
+  client:
+   serviceUrl:
+      defaultZone: ${vcap.services.eureka.credentials.url}
+      

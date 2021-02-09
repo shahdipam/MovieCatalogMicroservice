@@ -1,0 +1,20 @@
+   
+applications:
+- name: movie-catalog-service
+  org: launchpad
+  instances: 1
+  memory: 1024MB
+  path: target/movie-catalog-service-0.0.1-SNAPSHOT.jar
+  health-check-http-endpoint: /actuator/health
+  health-check-type: http
+ 
+  routes:
+  - route: movie-catalog-service.wdc-08-pcf1-apps.oc.vmware.com/
+  services:
+  - eureka
+  env:
+    CF_TARGET: https://api.wdc-08-pcf1-system.oc.vmware.com
+    CF_TRACE: true
+    
+
+

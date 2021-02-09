@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: movie-info-service
+
+eureka:
+  client:
+   serviceUrl:
+      defaultZone: ${vcap.services.eureka.credentials.url}
+      

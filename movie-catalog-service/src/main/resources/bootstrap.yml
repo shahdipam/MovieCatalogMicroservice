@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: movie-catalog-service
+
+eureka:
+  client:
+   serviceUrl:
+      defaultZone: ${vcap.services.eureka.credentials.url}
+      
